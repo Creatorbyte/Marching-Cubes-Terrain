@@ -54,6 +54,8 @@ namespace Eldemarkki.VoxelTerrain.Density
         /// <param name="allocator">How the memory should be allocated</param>
         public DensityVolume(int width, int height, int depth, Allocator allocator = Allocator.Persistent)
         {
+            if (width < 0 || height < 0 || depth < 0) throw new ArgumentException("Width, height, and depth should all be positive!");
+
             _densities = new NativeArray<byte>(width * height * depth, allocator);
 
             Width = width;
