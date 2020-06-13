@@ -9,61 +9,62 @@ namespace Tests
     {
         private DensityVolume densityVolume;
 
-        [TestCase(0, 0)]
-        [TestCase(5, 5)]
-        [TestCase(16, 16)]
-        public void Test_Int_Size_Constructor_Width(int size, int expectedSize)
+        [TestCase(0, 9, 3)]
+        [TestCase(5, 2, 13)]
+        [TestCase(16, 7, 4)]
+        public void Test_Xyz_Constructor_Width(int width, int height, int depth)
         {
-            densityVolume = new DensityVolume(size, Allocator.Temp);
-            Assert.AreEqual(expectedSize, densityVolume.Width);
+            densityVolume = new DensityVolume(width, height, depth, Allocator.Temp);
+            Assert.AreEqual(width, densityVolume.Width);
         }
 
-        [TestCase(0, 0)]
-        [TestCase(5, 5)]
-        [TestCase(16, 16)]
-        public void Test_Int_Size_Constructor_Height(int size, int expectedSize)
+        [TestCase(0, 9, 3)]
+        [TestCase(5, 2, 13)]
+        [TestCase(16, 7, 4)]
+        public void Test_Xyz_Constructor_Height(int width, int height, int depth)
         {
-            densityVolume = new DensityVolume(size, Allocator.Temp);
-            Assert.AreEqual(expectedSize, densityVolume.Height);
-
+            densityVolume = new DensityVolume(width, height, depth, Allocator.Temp);
+            Assert.AreEqual(height, densityVolume.Height);
         }
 
-        [TestCase(0, 0)]
-        [TestCase(5, 5)]
-        [TestCase(16, 16)]
-        public void Test_Int_Size_Constructor_Depth(int size, int expectedSize)
+        [TestCase(0, 9, 3)]
+        [TestCase(5, 2, 13)]
+        [TestCase(16, 7, 4)]
+        public void Test_Xyz_Constructor_Depth(int width, int height, int depth)
         {
-            densityVolume = new DensityVolume(size, Allocator.Temp);
-            Assert.AreEqual(expectedSize, densityVolume.Depth);
-        }
-
-        [TestCase(0, 0)]
-        [TestCase(5, 5)]
-        [TestCase(16, 16)]
-        public void Test_Int_Size_Constructor_Size(int size, int expectedSize)
-        {
-            densityVolume = new DensityVolume(size, Allocator.Temp);
-            Assert.AreEqual(new int3(expectedSize, expectedSize, expectedSize), densityVolume.Size);
-        }
-
-        [TestCase(0, 0)]
-        [TestCase(5, 5)]
-        [TestCase(16, 16)]
-        public void Test_Int_Size_Constructor_Length(int size, int expectedSize)
-        {
-            densityVolume = new DensityVolume(size, Allocator.Temp);
-            Assert.AreEqual(expectedSize * expectedSize * expectedSize, densityVolume.Length);
+            densityVolume = new DensityVolume(width, height, depth, Allocator.Temp);
+            Assert.AreEqual(depth, densityVolume.Depth);
         }
 
         [TestCase(0)]
         [TestCase(5)]
         [TestCase(16)]
-        public void Test_Int_Size_Constructor_IsCreated(int size)
+        public void Test_Int_Size_Constructor_Size(int size)
         {
             densityVolume = new DensityVolume(size, Allocator.Temp);
+            Assert.AreEqual(new int3(size, size, size), densityVolume.Size);
+        }
+
+        [TestCase(0, 9, 3)]
+        [TestCase(5, 2, 13)]
+        [TestCase(16, 7, 4)]
+        public void Test_Xyz_Constructor_Length(int width, int height, int depth)
+        {
+            densityVolume = new DensityVolume(width, height, depth, Allocator.Temp);
+            Assert.AreEqual(width * height * depth, densityVolume.Length);
+        }
+
+        [TestCase(0, 9, 3)]
+        [TestCase(5, 2, 13)]
+        [TestCase(16, 7, 4)]
+        public void Test_Xyz_Constructor_IsCreated(int width, int height, int depth)
+        {
+            densityVolume = new DensityVolume(width, height, depth, Allocator.Temp);
             Assert.AreEqual(true, densityVolume.IsCreated);
         }
 
+        [TestCase(-10)]
+        [TestCase(-5)]
         public void Test_Int_Size_Constructor_Negative_Throws(int size)
         {
             Assert.Throws<System.ArgumentException>(() =>
@@ -73,7 +74,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test_Int_Size_Constructor_IsNotCreated()
+        public void Test_Default_Constructor_IsNotCreated()
         {
             densityVolume = new DensityVolume();
             Assert.AreEqual(false, densityVolume.IsCreated);
