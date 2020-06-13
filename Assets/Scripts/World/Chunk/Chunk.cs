@@ -1,11 +1,11 @@
 ﻿using Eldemarkki.VoxelTerrain.MarchingCubes;
 using Eldemarkki.VoxelTerrain.Utilities;
-using Eldemarkki.VoxelTerrain.Density;
 using Unity.Collections;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Eldemarkki.VoxelTerrain.Data;
 
 namespace Eldemarkki.VoxelTerrain.World.Chunks
 {

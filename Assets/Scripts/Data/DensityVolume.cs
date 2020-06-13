@@ -3,7 +3,7 @@ using Eldemarkki.VoxelTerrain.Utilities;
 using Unity.Collections;
 using Unity.Mathematics;
 
-namespace Eldemarkki.VoxelTerrain.Density
+namespace Eldemarkki.VoxelTerrain.Data
 {
     /// <summary>
     /// A 3-dimensional volume of densities

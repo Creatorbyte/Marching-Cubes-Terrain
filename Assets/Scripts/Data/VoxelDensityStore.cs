@@ -8,7 +8,7 @@ using Unity.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Eldemarkki.VoxelTerrain.Density
+namespace Eldemarkki.VoxelTerrain.Data
 {
     /// <summary>
     /// A store which handles getting and setting densities for the world

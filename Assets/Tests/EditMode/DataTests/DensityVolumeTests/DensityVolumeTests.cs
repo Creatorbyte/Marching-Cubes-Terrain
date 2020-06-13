@@ -1,9 +1,8 @@
-﻿using Eldemarkki.VoxelTerrain.Density;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Unity.Collections;
 using Unity.Mathematics;
 
-namespace Tests
+namespace Eldemarkki.VoxelTerrain.Data
 {
     public class DensityVolumeTests
     {

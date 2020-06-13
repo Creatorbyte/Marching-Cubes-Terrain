@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using Eldemarkki.VoxelTerrain.Data;
 using Eldemarkki.VoxelTerrain.Utilities;
 using Unity.Burst;
 using Unity.Collections;

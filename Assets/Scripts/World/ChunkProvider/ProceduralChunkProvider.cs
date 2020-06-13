@@ -6,6 +6,7 @@ using Eldemarkki.VoxelTerrain.Density;
 using Unity.Jobs;
 using Unity.Mathematics;
 using UnityEngine;
+using Eldemarkki.VoxelTerrain.Data;
 
 namespace Eldemarkki.VoxelTerrain.World
 {

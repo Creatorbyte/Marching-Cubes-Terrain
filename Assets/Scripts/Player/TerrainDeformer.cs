@@ -1,8 +1,8 @@
 ﻿using Eldemarkki.VoxelTerrain.Utilities.Intersection;
 using System.Linq;
-using Eldemarkki.VoxelTerrain.Density;
 using Unity.Mathematics;
 using UnityEngine;
+using Eldemarkki.VoxelTerrain.Data;
 
 namespace Eldemarkki.VoxelTerrain.Player
 {

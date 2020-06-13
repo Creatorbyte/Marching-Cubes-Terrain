@@ -1,8 +1,7 @@
-﻿using Eldemarkki.VoxelTerrain.Utilities.Intersection;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using UnityEngine;
 
-namespace Tests
+namespace Eldemarkki.VoxelTerrain.Utilities.Intersection
 {
     public class GetIntersectionAreaTests
     {

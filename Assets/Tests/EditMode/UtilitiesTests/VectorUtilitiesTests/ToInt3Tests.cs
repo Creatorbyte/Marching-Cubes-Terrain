@@ -1,9 +1,8 @@
-﻿using Eldemarkki.VoxelTerrain.Utilities;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Tests
+namespace Eldemarkki.VoxelTerrain.Utilities
 {
     public class ToInt3Tests
     {

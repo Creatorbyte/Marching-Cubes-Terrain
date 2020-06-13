@@ -1,8 +1,7 @@
-﻿using Eldemarkki.VoxelTerrain.Utilities;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using Unity.Collections;
 
-namespace Tests
+namespace Eldemarkki.VoxelTerrain.Utilities
 {
     public class CounterTests
     {

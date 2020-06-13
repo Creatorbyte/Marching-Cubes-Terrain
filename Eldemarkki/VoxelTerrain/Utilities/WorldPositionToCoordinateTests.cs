@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Unity.Mathematics;
 
-namespace Tests
+namespace Eldemarkki.VoxelTerrain.Utilities
 {
     public class WorldPositionToCoordinateTests
     {
