@@ -1,5 +1,4 @@
 ﻿using Eldemarkki.VoxelTerrain.Data;
-using Eldemarkki.VoxelTerrain.Density;
 using Eldemarkki.VoxelTerrain.Utilities;
 using Unity.Burst;
 using Unity.Collections;

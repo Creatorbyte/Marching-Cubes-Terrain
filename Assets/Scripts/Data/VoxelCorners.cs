@@ -4,7 +4,7 @@
     /// A container for the voxel's corners
     /// </summary>
     /// <typeparam name="T">The element's type to hold in the corners</typeparam>
-    public struct VoxelCorners<T>
+    public struct VoxelCorners<T> : System.IEquatable<VoxelCorners<T>>
     {
         /// <summary>
         /// The first corner
@@ -99,6 +99,18 @@
                     default: throw new System.IndexOutOfRangeException();
                 }
             }
+        }
+
+        public bool Equals(VoxelCorners<T> other)
+        {
+            return Corner1.Equals(other.Corner1) &&
+                   Corner2.Equals(other.Corner2) &&
+                   Corner3.Equals(other.Corner3) &&
+                   Corner4.Equals(other.Corner4) &&
+                   Corner5.Equals(other.Corner5) &&
+                   Corner6.Equals(other.Corner6) &&
+                   Corner7.Equals(other.Corner7) &&
+                   Corner8.Equals(other.Corner8);
         }
     }
 }
